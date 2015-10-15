@@ -1,13 +1,15 @@
 var express = require('express'),
     app     = express(),
-    flickr  = require('flickrapi');
+    flickr  = require('flickrapi'),
+    YAML    = require('yamljs');
+    keys    = YAML.load(process.env.HOME + '/.keys.yml');
 
 app.set('views', './views');
 app.set('view engine', 'jade');
 
-app.get('/photos', function (req, res) {
+app.get('/', function (req, res) {
     flickr.tokenOnly(
-        { api_key: process.env.FLICKR_API_KEY },
+        { api_key: keys.flickr.key },
         function(error, f) {
             f.photos.search({
                 user_id: '98389216@N00',

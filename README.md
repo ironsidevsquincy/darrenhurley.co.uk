@@ -2,10 +2,27 @@
 
 ## Installation
 
-    $ npm install
+ * Requires node v0.10.36
+
+<!-- -->
+
+    $ make install
 
 ## Development
 
-    $ FLICKR_API_KEY=xxx nodemon app.js
+Create a file in your home directory called `.keys.yml`, of the format
 
-App available [here](http://localhost:300)
+```
+flickr:
+    key: XXX
+```
+
+Then,
+
+    $ make run
+
+App is running at [http://localhost:3000](http://localhost:3000)
+
+## Deploying
+
+    $ make deploy
