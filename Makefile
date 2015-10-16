@@ -17,7 +17,7 @@ build-production:
 	webpack -p client/js/main.js public/js/main.js
 
 run:
-	nodemon server/app.js
+	nodemon app.js
 
 test:
 
