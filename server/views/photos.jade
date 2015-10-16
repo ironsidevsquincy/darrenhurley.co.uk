@@ -1,0 +1,10 @@
+html
+    head
+    title!= title
+    link(rel='stylesheet' href='/css/main.css')
+    body
+        ol.photos
+            each photoUrl in photoUrls
+                li.photos__photo
+                    img.photos__photo_picture(src=photoUrl)
+        script(src='/js/main.js')
