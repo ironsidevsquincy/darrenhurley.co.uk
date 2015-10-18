@@ -4,7 +4,7 @@ html
     link(rel='stylesheet' href='/css/main.css')
     body
         ol.photos
-            each photoUrl in photoUrls
+            each photo in photos
                 li.photos__photo
-                    img.photos__photo_picture(src=photoUrl)
+                    img.photos__photo_picture(src=photo.url, width=photo.width, height=photo.height)
         script(src='/js/main.js')
