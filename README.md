@@ -1,6 +1,6 @@
 # darrenhurley.co.uk
 
-## Installation
+## Install
 
  * Requires node v0.10.36
 
@@ -8,7 +8,7 @@
 
     $ make install
 
-## Development
+## Develop
 
 Create a file in your home directory called `.keys.yml`, of the format
 
@@ -23,6 +23,6 @@ Then,
 
 App is running at [http://localhost:3000](http://localhost:3000)
 
-## Deploying
+## Deploy
 
     $ make deploy

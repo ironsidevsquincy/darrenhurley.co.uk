@@ -49,7 +49,4 @@ const getSizes = (photoId, api_key) => {
 
 };
 
-export default {
-    search,
-    getSizes
-};
+export { search, getSizes };
