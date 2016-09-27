@@ -1,12 +1,10 @@
 require('babel-register')({
-    plugins: [
-        require.resolve('babel-plugin-transform-es2015-modules-commonjs')//,
-        // require.resolve('babel-plugin-transform-object-assign')
-    ],
     presets: [
         require.resolve('babel-preset-es2015')
     ]
 });
-require('babel-polyfill');
+require('array.prototype.find').shim();
+require('es6-object-assign').polyfill();
+require('es6-promise').polyfill();
 
 require('./server/init');

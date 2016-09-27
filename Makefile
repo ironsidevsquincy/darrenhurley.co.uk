@@ -22,5 +22,5 @@ run:
 test:
 
 deploy: build-production
-	tar cvf - app.js server/ public/ node_modules/ | ssh darrenhu@darrenhurley.co.uk tar xvf - -C site
+	tar cvf - app.js package.json server/ public/ node_modules/ | ssh darrenhu@darrenhurley.co.uk tar xvf - -C site
 	ssh darrenhu@darrenhurley.co.uk touch tmp/restart.txt

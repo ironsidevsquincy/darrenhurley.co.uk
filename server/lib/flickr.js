@@ -1,52 +1,18 @@
-const flickr  = require('flickrapi');
+import denodeify from 'denodeify';
+import flickr from 'flickrapi';
 
-const search = (userId, api_key, opts = {}) => {
-    const searchExecutor = (resolve, reject) => {
-        flickr.tokenOnly(
-            { api_key },
-            (error, f) => {
-                if (error) {
-                    return reject(error);
-                }
-                f.photos.search(
-                    Object.assign({}, opts, { user_id: userId }),
-                    (err, result) => {
-                        if (err) {
-                            reject(err);
-                        } else {
-                            resolve(result);
-                        }
-                    }
-                );
-            }
+const search = (userId, apiKey, opts = {}) =>
+    denodeify(flickr.tokenOnly)({ api_key: apiKey })
+        .then(f =>
+            denodeify(f.photos.search)(
+                Object.assign({}, opts, { user_id: userId })
+            )
         );
-    };
-    return new Promise(searchExecutor);
-};
 
-const getSizes = (photoId, api_key) => {
-    const getSizesExecutor = (resolve, reject) => {
-        flickr.tokenOnly(
-            { api_key },
-            (error, f) => {
-                if (error) {
-                    return reject(error);
-                }
-                f.photos.getSizes(
-                    { photo_id: photoId },
-                    (err, result) => {
-                        if (err) {
-                            reject(err);
-                        } else {
-                            resolve(result);
-                        }
-                    }
-                );
-            }
+const getSizes = (photoId, apiKey) =>
+    denodeify(flickr.tokenOnly)({ api_key: apiKey })
+        .then(f =>
+            denodeify(f.photos.getSizes)({ photo_id: photoId })
         );
-    };
-    return new Promise(getSizesExecutor);
-
-};
 
 export { search, getSizes };

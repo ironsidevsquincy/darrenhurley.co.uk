@@ -11,7 +11,7 @@ app.set('view engine', 'jade');
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) =>
+app.get('/', (req, res, next) =>
     flickr.search('98389216@N00', keys.flickr.key, { tags: 'website', per_page: 10 })
         .then(results =>
             Promise.all(
@@ -38,6 +38,7 @@ app.get('/', (req, res) =>
                 }
             );
         })
+        .catch(next)
 );
 
 app.listen(port, () => {
