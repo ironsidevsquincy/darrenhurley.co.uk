@@ -27,8 +27,8 @@ run: build-client
 	nodemon server/app-dev.js
 
 run-production: build-production
-	node dist/app.js
+	cd dist; node app.js
 
 deploy: build-production
-	npm ls --prod --parseable --depth 0 | tail -n +2 | sed 's?'`pwd`/'??g' | xargs tar cvf - dist/ public/ | ssh darrenhu@darrenhurley.co.uk tar xvf - -C site
+	npm ls --prod --parseable --depth 0 | tail -n +2 | sed 's?'`pwd`/'??g' | xargs tar cvf - dist/ public/ views/ | ssh darrenhu@darrenhurley.co.uk tar xvf - -C site
 	ssh darrenhu@darrenhurley.co.uk touch tmp/restart.txt

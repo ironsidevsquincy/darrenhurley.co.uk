@@ -1,8 +1,9 @@
-import express from 'express';
-import YAML from 'yamljs';
-import * as flickr from './lib/flickr';
 import { shim as polyfillFind } from 'array.prototype.find';
 import { polyfill as polyfillPromise } from 'es6-promise';
+import express from 'express';
+import path from 'path';
+import YAML from 'yamljs';
+import * as flickr from './lib/flickr';
 
 polyfillFind();
 polyfillPromise();
@@ -10,10 +11,10 @@ const app = express();
 const keys = YAML.load(`${process.env.HOME}/.keys.yml`);
 const port = 3001;
 
-app.set('views', './server/views');
+app.set('views', path.join(__dirname, '..', 'views'));
 app.set('view engine', 'jade');
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/', (req, res, next) =>
     flickr.search('98389216@N00', keys.flickr.key, { tags: 'website', per_page: 10 })
