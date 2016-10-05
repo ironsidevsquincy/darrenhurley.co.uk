@@ -1,7 +1,11 @@
 import express from 'express';
 import YAML from 'yamljs';
 import * as flickr from './lib/flickr';
+import { shim as polyfillFind } from 'array.prototype.find';
+import { polyfill as polyfillPromise } from 'es6-promise';
 
+polyfillFind();
+polyfillPromise();
 const app = express();
 const keys = YAML.load(`${process.env.HOME}/.keys.yml`);
 const port = 3001;
