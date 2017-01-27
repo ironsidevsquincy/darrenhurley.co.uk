@@ -1,12 +1,8 @@
-import { shim as polyfillFind } from 'array.prototype.find';
-import { polyfill as polyfillPromise } from 'es6-promise';
 import express from 'express';
 import path from 'path';
 
 import * as controllers from './controllers';
 
-polyfillFind();
-polyfillPromise();
 const app = express();
 const port = 3001;
 
