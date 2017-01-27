@@ -17,7 +17,7 @@ build-client-production:
 	webpack -p client/js/main.js public/js/main.js
 
 build-server:
-	babel server -d dist --ignore server/app-dev.js
+	./node_modules/.bin/babel server -d dist --ignore server/app-dev.js
 
 build-production: build-client-production build-server
 
