@@ -2,13 +2,19 @@ body {
     margin: 0;
     background-color: #000000;
 }
+
 .photos {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 .photos__photo_picture {
     display: block;
     margin: 20px auto;
+}
+
+.browser {
+    background-repeat: no-repeat;
 }
 

@@ -1,0 +1,13 @@
+html
+    head
+    title!= title + ' | darrenhurley.co.uk'
+    body
+        h1= 'Support for ' + features.join(', ')
+        table
+            tr
+                th Browser
+                th Minimum version
+            each version, browser in support
+                tr
+                    td(class='browser browser--' + browser style={ 'background-image': 'url(https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.2.2/' + browser +'/' + browser + '.png)' })= browser
+                    td= version
