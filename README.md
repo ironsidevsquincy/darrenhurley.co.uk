@@ -2,7 +2,7 @@
 
 ## Install
 
- * Requires node v0.10.40
+ * Requires node v0.10.47
 
 <!-- -->
 
@@ -20,7 +20,7 @@ flickr:
 
 Then,
 
-    $ make build run
+    $ make run
 
 App is running at [http://localhost:3001](http://localhost:3001)
 
