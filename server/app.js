@@ -1,20 +1,19 @@
-import 'babel-polyfill';
-import express from 'express';
-import path from 'path';
+import express from 'express'
+import path from 'path'
 
-import * as controllers from './controllers';
+import * as controllers from './controllers'
 
-const app = express();
-const port = 3001;
+const app = express()
+const port = 3001
 
-app.set('views', path.join(__dirname, '..', 'views'));
-app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, '..', 'views'))
+app.set('view engine', 'pug')
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')))
 
-app.get('/', controllers.homepage);
-app.get('/browser-support', controllers.browserSupport);
+app.get('/', controllers.homepage)
+app.get('/browser-support', controllers.browserSupport)
 
 app.listen(port, () => {
-    console.log(`App running at http://localhost:${port}`);
-});
+  console.log(`App running at http://localhost:${port}`)
+})

@@ -1,9 +1,10 @@
-.DS_Store
-
-/npm-debug.log
-
 /.idea/
 /data/
 /dist/
 /node_modules/
 /public/
+
+.DS_Store
+
+/npm-debug.log
+/package-lock.json
