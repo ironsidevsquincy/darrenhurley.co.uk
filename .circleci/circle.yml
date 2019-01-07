@@ -1,0 +1,16 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/node:0.10.47
+    steps:
+      - checkout
+      - run:
+          name: Install
+          command: make node_modules
+      - run:
+          name: Build - public
+          command: make public
+      - run:
+          name: Build - dist
+          command: make dist
