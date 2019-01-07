@@ -9,10 +9,10 @@ node_modules: package.json yarn.lock
 test:
 	yarn eslint --cache --cache-location .eslintcache ./
 
-public/css/main.css: client/css/*.scss client/css/**/*.scss
+public/css/main.css: client/css/*.scss
 	yarn node-sass --source-map $(@D) --source-map-contents --indent-width 4 --output-style compressed -o $(@D) $(<D)/main.scss
 
-public/js/main.js: webpack.config.js client/js/*.js client/js/**/*.js
+public/js/main.js: webpack.config.js client/js/*.js
 	yarn webpack -p client/js/main.js --output $@
 
 public/pages/%.html: pages/%.md
