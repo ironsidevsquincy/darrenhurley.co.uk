@@ -14,3 +14,6 @@ jobs:
       - run:
           name: Build - dist
           command: make dist
+      - run:
+          name: Deploy
+          command: make deploy
