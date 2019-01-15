@@ -42,5 +42,5 @@ run-production: dist public
 
 deploy: dist public
 	tar cvf - package.json dist/ public/ views/ | ssh darrenhu@darrenhurley.co.uk tar xvf - -C site
-	ssh darrenhu@darrenhurley.co.uk npm install - -C site
+	ssh darrenhu@darrenhurley.co.uk 'cd ./site && npm install'
 	ssh darrenhu@darrenhurley.co.uk touch tmp/restart.txt
