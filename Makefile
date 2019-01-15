@@ -41,5 +41,6 @@ run-production: dist public
 	node dist/app.js
 
 deploy: dist public
-	npm ls --prod --parseable --depth 0 | tail -n +2 | sed 's?'`pwd`/'??g' | xargs tar cvf - dist/ public/ views/ | ssh darrenhu@darrenhurley.co.uk tar xvf - -C site
+	tar cvf - package.json dist/ public/ views/ | ssh darrenhu@darrenhurley.co.uk tar xvf - -C site
+	ssh darrenhu@darrenhurley.co.uk npm install - -C site
 	ssh darrenhu@darrenhurley.co.uk touch tmp/restart.txt
