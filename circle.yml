@@ -17,5 +17,9 @@ jobs:
       - run:
           name: Build - dist
           command: make dist
+      - run:
+          name: Fix host authenticity for 12.34.567.890
+          command: |
+            ssh-keyscan darrenhurley.co.uk >> ~/.ssh/known_hosts
       - deploy:
           command: make deploy
