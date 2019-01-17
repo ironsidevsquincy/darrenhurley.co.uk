@@ -1077,7 +1077,15 @@ babel-loader@^8.0.5:
     mkdirp "^0.5.1"
     util.promisify "^1.0.0"
 
-babel-runtime@^6.26.0:
+babel-plugin-transform-util-promisify@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-util-promisify/-/babel-plugin-transform-util-promisify-0.2.2.tgz#114e19f9c6749610cffced3e303f621f2415b871"
+  integrity sha512-X01+NE42KBHgU1cZ8rUSP9+YdoFEEj4DY7eCJiwNgyNzSP25Yjp3lzZUxcG4MTyU3V/tG8SyLTra1FGetJYRQg==
+  dependencies:
+    babel-runtime "^6.18.0"
+    babylon "^6.18.0"
+
+babel-runtime@^6.18.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=

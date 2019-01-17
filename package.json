@@ -18,6 +18,7 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-transform-util-promisify": "^0.2.2",
     "eslint": "^5.12.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",

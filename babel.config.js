@@ -1,13 +1,16 @@
-const presets = [
-  [
-    '@babel/env',
-    {
-      targets: {
-        node: '0.10.47'
-      },
-      useBuiltIns: 'usage'
-    }
-  ]
-]
-
-module.exports = { presets }
+module.exports = {
+  presets: [
+    [
+      '@babel/env',
+      {
+        targets: {
+          node: '0.10.47'
+        },
+        useBuiltIns: 'usage'
+      }
+    ]
+  ],
+  plugins: [
+    'transform-util-promisify'
+  ],
+}
