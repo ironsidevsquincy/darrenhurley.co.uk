@@ -11,7 +11,7 @@ app.set('view engine', 'pug')
 
 app.use(express.static(path.join(__dirname, '..', 'public')))
 
-app.get('/', controllers.homepage)
+app.get('/api', controllers.api)
 app.get('/browser-support', controllers.browserSupport)
 
 app.listen(port, () => {

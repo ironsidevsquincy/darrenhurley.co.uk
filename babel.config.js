@@ -3,14 +3,15 @@ module.exports = {
     [
       '@babel/env',
       {
+        useBuiltIns: 'usage',
+        corejs: '3',
         targets: {
           node: '0.10.47'
-        },
-        useBuiltIns: 'usage'
+        }
       }
     ]
   ],
   plugins: [
     'transform-util-promisify'
-  ],
+  ]
 }

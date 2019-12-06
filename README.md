@@ -2,23 +2,13 @@
 
 ## Install
 
- * Requires node v0.10.47
+ * Requires node v12
 
 <!-- -->
 
     $ make install
 
-## Develop
-
-Create a file in your home directory called `.keys.yml`, of the format
-
-```
-flickr:
-    key: XXX
-    secret: XXX
-```
-
-Then,
+## Run
 
     $ make run
 

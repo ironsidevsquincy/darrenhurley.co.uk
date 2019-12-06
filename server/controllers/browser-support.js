@@ -14,7 +14,7 @@ const getSupportedVersions = versions => {
     .map(([version]) => version)
 }
 
-export default (req, res, next) => {
+export default (req, res) => {
   const features = (req.query.features || '').split(',')
   const featuresSupport = features.filter(feature => caniuse.data[feature])
     .reduce((featureSupportAcc, feature) => {

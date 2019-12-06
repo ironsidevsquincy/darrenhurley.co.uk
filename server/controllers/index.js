@@ -1,7 +1,7 @@
 import browserSupport from './browser-support'
-import homepage from './homepage'
+import api from './api'
 
 export {
   browserSupport,
-  homepage
+  api
 }

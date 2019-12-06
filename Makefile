@@ -7,7 +7,7 @@ node_modules: package.json yarn.lock
 	yarn
 
 test:
-	yarn eslint --cache --cache-location .eslintcache ./
+	yarn lint ./
 
 public/css/main.css: client/css/*.scss
 	yarn node-sass --source-map $(@D) --source-map-contents --indent-width 4 --output-style compressed -o $(@D) $(<D)/main.scss
