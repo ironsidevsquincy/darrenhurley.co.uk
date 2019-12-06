@@ -13,6 +13,9 @@
       "yarn lint"
     ]
   },
+  "engines": {
+    "node" : "12.13.1"
+  },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "caniuse-db": "^1.0.30000927",
