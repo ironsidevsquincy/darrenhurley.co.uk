@@ -2,7 +2,7 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: node:12.13.1-stretch-slim
+      - image: node:12.13.1-stretch
     steps:
       - add_ssh_keys:
           fingerprints:
