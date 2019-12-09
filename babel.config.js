@@ -10,8 +10,5 @@ module.exports = {
         }
       }
     ]
-  ],
-  plugins: [
-    'transform-util-promisify'
   ]
 }

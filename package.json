@@ -1,7 +1,7 @@
 {
   "license": "UNLICENSED",
   "scripts": {
-    "lint": "yarn eslint --cache --cache-location .eslintcache"
+    "lint": "eslint --cache --cache-location .eslintcache"
   },
   "husky": {
     "hooks": {
@@ -10,7 +10,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "yarn lint"
+      "npm run-script lint"
     ]
   },
   "engines": {
@@ -19,7 +19,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "caniuse-db": "^1.0.30000927",
-    "core-js": "3",
+    "core-js": "^3.4.8",
     "express": "^4.9.5",
     "lodash": "^4.17.4",
     "pug": "2.0.0-rc.4",
@@ -32,11 +32,9 @@
     "@babel/preset-env": "^7.7.6",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.5",
-    "babel-plugin-add-module-exports": "^1.0.2",
-    "babel-plugin-transform-util-promisify": "^0.2.2",
     "eslint": "^6.7.2",
     "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
