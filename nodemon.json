@@ -2,6 +2,7 @@
   "ignoreRoot": [],
   "watch": [
     "node_modules",
+    "pages",
     "server",
     "views"
   ]

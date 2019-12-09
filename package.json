@@ -14,7 +14,7 @@
     ]
   },
   "engines": {
-    "node" : "12.13.1"
+    "node": "12.13.1"
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
@@ -22,16 +22,17 @@
     "core-js": "3",
     "express": "^4.9.5",
     "lodash": "^4.17.4",
-    "pug": "^2.0.4",
+    "pug": "2.0.0-rc.4",
     "semver": "^6.3.0",
     "semver-loose": "^0.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-env": "^7.7.6",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-transform-util-promisify": "^0.2.2",
     "eslint": "^6.7.2",
     "eslint-config-standard": "^14.1.0",

@@ -10,6 +10,7 @@
         var script = document.createElement('script');
         script.setAttribute('src', 'http://localhost:3001/api/slow?pause=1000');
         script.setAttribute('onload', 'console.log(\'1\');');
+        script.setAttribute('async', 'false');
         document.head.appendChild(script);
     </script>
     <script>
