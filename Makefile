@@ -3,7 +3,7 @@
 clean:
 	git clean -fxd
 
-node_modules: package.json yarn.lock
+node_modules: package.json package-lock.json
 	npm install
 
 test:
