@@ -1,3 +1,5 @@
 export default (req, res) => {
-  return res.render('homepage')
+  return res
+    .set('Cache-Control', 'max-age=300, public')
+    .render('homepage')
 }
