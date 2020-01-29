@@ -6,7 +6,7 @@
 
 <!-- -->
 
-    $ make install
+    $ make node_modules
 
 ## Run
 
