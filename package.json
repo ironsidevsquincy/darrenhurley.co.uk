@@ -42,7 +42,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.4",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^2.0.2",
     "showdown": "^1.9.1",
     "webpack": "^4.41.5",
