@@ -2,7 +2,11 @@
   "license": "UNLICENSED",
   "repository": "github:ironsidevsquincy/darrenhurley.co.uk",
   "scripts": {
-    "lint": "eslint --cache --cache-location .eslintcache"
+    "lint": "eslint --cache --cache-location .eslintcache",
+    "build": "yarn babel -d build src --copy-files",
+    "build:pages": "yarn showdown makehtml -i static/pages/seen-read/2019.md -o build/static/pages/2019.html",
+    "start": "yarn nodemon index-dev.js",
+    "deploy": "deta deploy"
   },
   "husky": {
     "hooks": {
@@ -15,7 +19,7 @@
     ]
   },
   "engines": {
-    "node": "12.13.1"
+    "node": ">=14 <15"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
@@ -32,7 +36,6 @@
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
-    "@babel/register": "^7.8.3",
     "babel-loader": "^8.0.5",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
@@ -42,10 +45,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.4",
-    "node-sass": "^4.13.1",
     "nodemon": "^2.0.2",
-    "showdown": "^1.9.1",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.2.1"
+    "showdown": "^1.9.1"
   }
 }

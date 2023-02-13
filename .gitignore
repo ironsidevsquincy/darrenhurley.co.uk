@@ -1,12 +1,8 @@
 /.idea/
-/data/
-/dist/
+/build/
 /node_modules/
-/public/
 
 .DS_Store
 
 /.eslintcache
-/npm-debug.log
 /yarn-error.log
-/yarn.lock

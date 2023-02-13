@@ -1,4 +1,1 @@
-/dist/**/*
-/public/**/*
-
-/webpack.config.js
+/build/**/*
