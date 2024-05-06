@@ -1,4 +1,5 @@
 {
+  "name": "darrenhurley.co.uk",
   "license": "UNLICENSED",
   "repository": "github:ironsidevsquincy/darrenhurley.co.uk",
   "scripts": {
@@ -21,19 +22,20 @@
     "semver-loose": "^0.2.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.1.1",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.10",
     "copyfiles": "^2.4.1",
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint": "^9.1.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "nodemon": "^3.1.0",
     "showdown": "^1.9.1",
     "tsx": "^4.9.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.1"
   },
   "engines": {
     "node": ">=20"

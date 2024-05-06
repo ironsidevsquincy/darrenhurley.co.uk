@@ -16,7 +16,7 @@ function typecheck {
 }
 
 function copy:assets {
-  copyfiles -u 1 -e "**/*.js*" -e "**/*.ts*" "src/**/*" build
+  copyfiles -u 1 -e "**/*.ts*" "src/**/*" build
 }
 
 function build:clean {
@@ -24,15 +24,16 @@ function build:clean {
 }
 
 function build:pages {
-  showdown makehtml -i static/pages/seen-read/2017.md -o build/static/pages/2017.html
-  showdown makehtml -i static/pages/seen-read/2018.md -o build/static/pages/2018.html
-  showdown makehtml -i static/pages/seen-read/2019.md -o build/static/pages/2019.html
+  showdown makehtml -i src/static/pages/seen-read/2017.md -o build/static/pages/seen-read/2017.html
+  showdown makehtml -i src/static/pages/seen-read/2018.md -o build/static/pages/seen-read/2018.html
+  showdown makehtml -i src/static/pages/seen-read/2019.md -o build/static/pages/seen-read/2019.html
 }
 
 function build {
   build:clean
   tsc $@
   copy:assets
+  build:pages
 }
 
 function start {

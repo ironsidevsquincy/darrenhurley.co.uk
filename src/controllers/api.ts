@@ -3,7 +3,7 @@ import express from 'express'
 const router = express.Router()
 
 router.get('/slow', (req, res) => {
-  const { wait = 0 } = req.query
+  const wait = req.query.wait as unknown as number
 
   return setTimeout(() => {
     return res

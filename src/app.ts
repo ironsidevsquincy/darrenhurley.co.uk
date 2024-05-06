@@ -12,6 +12,5 @@ app.use(express.static(path.join(__dirname, 'static')))
 
 app.get('/', controllers.homepage)
 app.use('/api', controllers.api)
-app.get('/browser-support', controllers.browserSupport)
 
 export default app
