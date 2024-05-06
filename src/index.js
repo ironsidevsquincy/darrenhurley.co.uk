@@ -1,4 +1,4 @@
-const { default: app } = require('./build/app')
+const { default: app } = require('./app')
 
 const port = 3001
 

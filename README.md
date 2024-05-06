@@ -2,26 +2,24 @@
 
 ## Install
 
- * Requires node v14
+ * Node.js v20
 
-<!-- -->
+Install dependencies
 
-    $ yarn
+```shell
+yarn
+```
 
 ## Build
 
-    $ yarn build
-
-Or in watch mode
-
-    $ yarn build --watch
+```shell
+yarn build
+```
 
 ## Run
 
-    $ yarn start
+```shell
+yarn start:dev
+```
 
 App is running at [http://localhost:3001](http://localhost:3001)
-
-## Deploy
-
-    $ yarn deploy

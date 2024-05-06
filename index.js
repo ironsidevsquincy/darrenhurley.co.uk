@@ -1,3 +1,5 @@
-const { default: app } = require('./buil/app')
+const { default: app } = require('./build/app')
 
-module.exports = app
+const port = 3001
+
+app.listen(port, () => console.log(`App running at http://localhost:${port}`))
