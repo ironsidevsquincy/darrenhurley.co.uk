@@ -1,10 +1,10 @@
-const eslint = require('@eslint/js')
-const tsEslint = require('typescript-eslint')
-const typescriptPlugin = require('@typescript-eslint/eslint-plugin')
-const importPlugin = require('eslint-plugin-import')
-const simpleImportSortPlugin = require('eslint-plugin-simple-import-sort')
+import eslint from '@eslint/js'
+import tsEslint from 'typescript-eslint'
+import typescriptPlugin from '@typescript-eslint/eslint-plugin'
+import importPlugin from 'eslint-plugin-import'
+import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort'
 
-module.exports = tsEslint.config(
+export default tsEslint.config(
   eslint.configs.recommended,
   ...tsEslint.configs.recommended,
   // FIXME: commented out until `eslint-plugin-import` is eslint v9 compatible

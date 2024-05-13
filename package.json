@@ -2,6 +2,7 @@
   "name": "darrenhurley.co.uk",
   "license": "UNLICENSED",
   "repository": "github:ironsidevsquincy/darrenhurley.co.uk",
+  "type": "module",
   "scripts": {
     "lint": "./taskfile.sh lint",
     "lint:all": "./taskfile.sh lint:all",

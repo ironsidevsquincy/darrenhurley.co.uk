@@ -1,5 +1,5 @@
-import api from './api'
-import homepage from './homepage'
+import api from './api.js'
+import homepage from './homepage.js'
 
 export {
   api,
