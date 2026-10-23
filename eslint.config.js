@@ -1,6 +1,7 @@
 import eslint from '@eslint/js'
 import tsEslint from 'typescript-eslint'
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
+import stylisticPlugin from '@stylistic/eslint-plugin'
 import importPlugin from 'eslint-plugin-import'
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort'
 
@@ -15,23 +16,14 @@ export default tsEslint.config(
     plugins: {
       '@typescript-eslint': typescriptPlugin,
       import: importPlugin,
-      'simple-import-sort': simpleImportSortPlugin
+      'simple-import-sort': simpleImportSortPlugin,
+      'stylistic': stylisticPlugin
     },
     rules: {
       '@typescript-eslint/ban-ts-comment': ['error', {
         'ts-ignore': 'allow-with-description'
       }],
-      '@typescript-eslint/ban-types': 'error',
       '@typescript-eslint/explicit-module-boundary-types': 'error',
-      '@typescript-eslint/member-delimiter-style': ['error', {
-        multiline: {
-          delimiter: 'semi',
-          requireLast: true
-        },
-        singleline: {
-          delimiter: 'semi'
-        }
-      }],
       '@typescript-eslint/naming-convention': ['error', {
         selector: 'default',
         format: null
@@ -51,10 +43,10 @@ export default tsEslint.config(
         selector: 'method',
         format: ['strictCamelCase']
       }],
-      '@typescript-eslint/no-extra-semi': 'error',
+      '@typescript-eslint/no-empty-object-type': 'error',
+      '@typescript-eslint/no-unsafe-function-type': 'error',
       '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/space-infix-ops': 'error',
-      '@typescript-eslint/type-annotation-spacing': 'error',
+      '@typescript-eslint/no-wrapper-object-types': 'error',
       camelcase: 'off',
       'comma-dangle': 'error',
       'max-statements-per-line': ['error', {
@@ -65,7 +57,19 @@ export default tsEslint.config(
       'one-var': ['error', 'never'],
       'simple-import-sort/exports': 'error',
       'simple-import-sort/imports': 'error',
-      'space-infix-ops': 'off'
+      'space-infix-ops': 'off',
+      'stylistic/member-delimiter-style': ['error', {
+        multiline: {
+          delimiter: 'semi',
+          requireLast: true
+        },
+        singleline: {
+          delimiter: 'semi'
+        }
+      }],
+      'stylistic/no-extra-semi': 'error',
+      'stylistic/space-infix-ops': 'error',
+      'stylistic/type-annotation-spacing': 'error',
     }
   }
 )

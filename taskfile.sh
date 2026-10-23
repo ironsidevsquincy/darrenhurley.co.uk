@@ -8,7 +8,7 @@ function lint {
 }
 
 function lint:all {
-  lint ./src $@
+  lint ./src
 }
 
 function typecheck {

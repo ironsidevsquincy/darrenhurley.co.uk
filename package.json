@@ -16,7 +16,7 @@
   "dependencies": {
     "acorn": "^8.19.0",
     "caniuse-db": "^1.0.30001819",
-    "express": "^4.22.3",
+    "express": "^5.3.0",
     "lodash": "^4.17.4",
     "pug": "^3.0.4",
     "semver": "^7.1.1",
@@ -24,7 +24,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
-    "@types/express": "^4.17.25",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/express": "^5.0.6",
     "@types/node": "^26.6.5",
     "copyfiles": "^2.4.1",
     "eslint": "^9.39.5",
@@ -35,7 +36,7 @@
     "nodemon": "^3.1.14",
     "showdown": "^2.1.0",
     "tsx": "^4.23.15",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.72.0"
   },
   "engines": {
