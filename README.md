@@ -7,19 +7,19 @@
 Install dependencies
 
 ```shell
-yarn
+npm install
 ```
 
 ## Build
 
 ```shell
-yarn build
+npm run build
 ```
 
 ## Run
 
 ```shell
-yarn start:dev
+npm run start:dev
 ```
 
 App is running at [http://localhost:3001](http://localhost:3001)

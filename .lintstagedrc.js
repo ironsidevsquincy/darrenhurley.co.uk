@@ -1,6 +1,6 @@
 export default  {
   '*.ts': [
-    'yarn lint',
-    () => 'yarn typecheck'
+    'npm run lint',
+    () => 'npm run typecheck'
   ]
 }
