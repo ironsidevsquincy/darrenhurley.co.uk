@@ -12,7 +12,7 @@
     "resolveJsonModule": true,
 
     // Emit
-    "rootDir": "./",
+    "rootDir": "./src",
     "outDir": "build",
 
     // JavaScript Support
